@@ -81,6 +81,7 @@ Pete is broke : (
 You must help him save money : (
 
 [[Help him|Room]]
+[[WaterStart (exists only for testing purposes)|WaterStart]]
 
 <<set $diningDollars to 1>><<set $happiness to 1>><<set $day to 1>><<set $energy to 3>>
 <<set $selectBins = ["Trash", "Recyle", "Compost"]>>
