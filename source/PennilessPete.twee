@@ -42,3 +42,7 @@ You must help him save money : (
 [[Help him|Room]]
 
 <<set $diningDollars to 0>><<set $happiness to 0>>
+<<set $selectBins = ["Trash", "Recyle", "Compost"]>>
+<<set $recycleObjects = ["Cans", "Paper Bags"]>>
+<<set $trashObjects = ["Chips Bag", "Ballon"]>>
+<<set $compostObjects = ["Shit", "Banana Peel"]>>
