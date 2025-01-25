@@ -53,7 +53,7 @@ Where will he put this object?
 :: Trash
 <<if $trashObjects.includes($recycleObject)>>This is correct! The automated detection system assigns Pete 5 dining dollars and he gets 1 happiness.<<set $diningDollars to $diningDollars+5>><<set $happiness to $happiness + 1>>
 
-<<else>>This is incorrect! Pete loses 1 happiness. He is devastated.<<set $happiness to $happiness - 1>>
+<<else>>This is incorrect! Pete loses 1 happiness and the omniscient Purdue surveillance lords remove 1 dining dollar from his account for this unforgivable error. He is devastated.<<set $happiness to $happiness - 1>><<set $diningDollars to $diningDollars - 1>>
 <</if>>
 
 [[Room]]
@@ -61,7 +61,7 @@ Where will he put this object?
 :: Recycle
 <<if $recycleObjects.includes($recycleObject)>>This is correct! The automated detection system assigns Pete 5 dining dollars and he gets 1 happiness.<<set $diningDollars to $diningDollars+5>><<set $happiness to $happiness + 1>>
 
-<<else>>This is incorrect! Pete loses 1 happiness. He is devastated.<<set $happiness to $happiness - 1>>
+<<else>>This is incorrect! Pete loses 1 happiness and the omniscient Purdue surveillance lords remove 1 dining dollar from his account for this unforgivable error. He is devastated.<<set $happiness to $happiness - 1>><<set $diningDollars to $diningDollars - 1>>
 <</if>>
 
 [[Room]]
@@ -69,7 +69,7 @@ Where will he put this object?
 :: Compost
 <<if $compostObjects.includes($recycleObject)>>This is correct! The automated detection system assigns Pete 5 dining dollars and he gets 1 happiness.<<set $diningDollars to $diningDollars+5>><<set $happiness to $happiness + 1>>
 
-<<else>>This is incorrect! Pete loses 1 happiness. He is devastated.<<set $happiness to $happiness - 1>>
+<<else>>This is incorrect! Pete loses 1 happiness and the omniscient Purdue surveillance lords remove 1 dining dollar from his account for this unforgivable error. He is devastated.<<set $happiness to $happiness - 1>><<set $diningDollars to $diningDollars - 1>>
 <</if>>
 
 [[Room]]

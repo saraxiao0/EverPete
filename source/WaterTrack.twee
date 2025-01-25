@@ -1,14 +1,3 @@
-:: StoryTitle
-    Water Tracking for Penniless Pete
-
-:: StoryData
-{
-    "ifid": "D762BA5D-5833-4B29-A4C7-A6FFDF8A44A4",
-    "format": "SugarCube",
-    "format-version": "2.37.3",
-    "start": "WaterStart"
-}
-
 :: WaterStart {"position":"575,250","size":"100,100"}
 Welcome to the water-saving game for Penniless Pete!  
 Pete needs to reduce his water usage to save money and increase his happiness.  
