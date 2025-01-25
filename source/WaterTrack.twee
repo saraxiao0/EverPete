@@ -2,13 +2,9 @@
 Welcome to the water-saving game for Penniless Pete!  
 Pete needs to reduce his water usage to save money and increase his happiness.  
 
-
 [[Track Water Usage|WaterGame]]
 
 :: WaterGame
-<<set $waterUsageOptions = ["Shower", "Faucet", "Dishwasher", "Washing Machine", "Rainwater Collection"]>>  
-<<set $waterUsageAction = waterUsageOptions.random() >>
-
 Where will Pete reduce his water usage?
 
 [[Shorten Shower]]
@@ -16,6 +12,9 @@ Where will Pete reduce his water usage?
 [[Use Dishwasher]]
 [[Use Washing Machine]]
 [[Collect Rainwater]]
+
+<<set $waterUsageOptions = ["Shower", "Faucet", "Dishwasher", "Washing Machine", "Rainwater Collection"]>>  
+<<set $waterUsageAction = $waterUsageOptions.random() >>
 
 :: Shorten Shower
 <<if $waterUsageAction == "Shower">>
@@ -29,7 +28,7 @@ Pete's current water usage: <<print $waterUsage>> liters/day.
 Pete needs to use less water to earn dining dollars and increase his happiness.
 <</if>>
 
-[[Return to Water Start|WaterStart]]
+[[Return|Room]]
 
 :: Turn off Faucet
 <<if $waterUsageAction == "Faucet">>
@@ -43,7 +42,7 @@ Pete's current water usage: <<print $waterUsage>> liters/day.
 Pete needs to use less water to earn dining dollars and increase his happiness.
 <</if>>
 
-[[Return to Water Start|WaterStart]]
+[[Return|Room]]
 
 :: Use Dishwasher
 <<if $waterUsageAction == "Dishwasher">>
@@ -57,7 +56,7 @@ Pete's current water usage: <<print $waterUsage>> liters/day.
 Pete needs to use less water to earn dining dollars and increase his happiness.
 <</if>>
 
-[[Return to Water Start|WaterStart]]
+[[Return|Room]]
 
 :: Use Washing Machine
 <<if $waterUsageAction == "Washing Machine">>
@@ -71,7 +70,7 @@ Pete's current water usage: <<print $waterUsage>> liters/day.
 Pete needs to use less water to earn dining dollars and increase his happiness.
 <</if>>
 
-[[Return to Water Start|WaterStart]]
+[[Return|Room]]
 
 :: Collect Rainwater
 <<if $waterUsageAction == "Rainwater Collection">>
@@ -85,14 +84,4 @@ Pete's current water usage: <<print $waterUsage>> liters/day.
 Pete needs to use less water to earn dining dollars and increase his happiness.
 <</if>>
 
-[[Return to Water Start|WaterStart]]
-
-:: Score
-Pete's progress so far:  
-Dining Dollars: $diningDollars  
-Happiness: $happiness  
-Water Usage: <<print $waterUsage>> liters/day  
-
-Great job helping Pete so far! Let’s keep reducing his eco footprint.  
-
-[[Return to Room|Room]]
+[[Return|Room]]
