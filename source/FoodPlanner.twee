@@ -1,0 +1,42 @@
+:: StoryTitle
+Untitled Story
+
+
+:: StoryData
+{
+  "ifid": "AD442F5F-34BD-4CA4-9F1A-9F4A211CD8B0",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Sunday",
+  "zoom": 0.6
+}
+
+:: StartFood {"position":"575,875","size":"100,100"}
+
+You have $leftovers leftovers and $diningDollars Dining Dollars
+<<if $leftovers > 0>>Would you like to eat leftovers or takeout
+    [[Takeout]]
+    [[Leftovers]]
+<<else>>You have no leftovers, you must get takeout
+    [[Takeout]]
+    <</if>>
+
+:: Takeout {"position":"575,875","size":"100,100"}
+$diningDollars is $diningDollars - 5
+$leftovers is $leftovers + 1
+Pete feels happy and has gained a leftover.
+[[End]]
+
+
+:: Leftover {"position":"575,875","size":"100,100"}
+$leftovers is $leftovers - 1
+Pete feels happy and has lost a leftover
+[[End]]
+
+:: End {"position":"575,875","size":"100,100"}
+This just goes to the next day, probably increase day counter here
+
+
+<<set $leftoversAmount = 0>>
+<<set $diningDollars = 100>>
+<<set $dayOfTheWeek = 0>>
