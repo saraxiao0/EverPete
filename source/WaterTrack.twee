@@ -1,0 +1,87 @@
+:: WaterStart {"position":"575,250","size":"100,100"}
+Welcome to the water-saving game for Penniless Pete!  
+Pete needs to reduce his water usage to save money and increase his happiness.  
+
+[[Track Water Usage|WaterGame]]
+
+:: WaterGame
+Where will Pete reduce his water usage?
+
+[[Shorten Shower]]
+[[Turn off Faucet]]
+[[Use Dishwasher]]
+[[Use Washing Machine]]
+[[Collect Rainwater]]
+
+<<set $waterUsageOptions = ["Shower", "Faucet", "Dishwasher", "Washing Machine", "Rainwater Collection"]>>  
+<<set $waterUsageAction = $waterUsageOptions.random() >>
+
+:: Shorten Shower
+<<if $waterUsageAction == "Shower">>
+Pete shortened his shower by 5 minutes! Water usage is reduced by 10 liters.  
+<<set $waterUsage -= 10>>
+<<set $happiness += 1>>
+<<else>>
+This action doesn't reduce water usage.  
+<<set $happiness -= 1>>
+Pete's current water usage: <<print $waterUsage>> liters/day.  
+Pete needs to use less water to earn dining dollars and increase his happiness.
+<</if>>
+
+[[Return|Room]]
+
+:: Turn off Faucet
+<<if $waterUsageAction == "Faucet">>
+Pete turned off the faucet while brushing teeth! Water usage is reduced by 5 liters.  
+<<set $waterUsage -= 5>>
+<<set $happiness += 1>>
+<<else>>
+This action doesn't reduce water usage.  
+<<set $happiness -= 1>>
+Pete's current water usage: <<print $waterUsage>> liters/day.  
+Pete needs to use less water to earn dining dollars and increase his happiness.
+<</if>>
+
+[[Return|Room]]
+
+:: Use Dishwasher
+<<if $waterUsageAction == "Dishwasher">>
+Pete used a dishwasher! Water usage is reduced by 15 liters.  
+<<set $waterUsage -= 15>>
+<<set $happiness += 2>>
+<<else>>
+This action doesn't reduce water usage.  
+<<set $happiness -= 1>>
+Pete's current water usage: <<print $waterUsage>> liters/day.  
+Pete needs to use less water to earn dining dollars and increase his happiness.
+<</if>>
+
+[[Return|Room]]
+
+:: Use Washing Machine
+<<if $waterUsageAction == "Washing Machine">>
+Pete used the washing machine efficiently! Water usage is reduced by 20 liters.   
+<<set $waterUsage -= 20>>
+<<set $happiness += 2>>
+<<else>>
+This action doesn't reduce water usage.  
+<<set $happiness -= 1>>
+Pete's current water usage: <<print $waterUsage>> liters/day.  
+Pete needs to use less water to earn dining dollars and increase his happiness.
+<</if>>
+
+[[Return|Room]]
+
+:: Collect Rainwater
+<<if $waterUsageAction == "Rainwater Collection">>
+Pete set up a rainwater collection system! Water usage is reduced by 30 liters.  
+<<set $waterUsage -= 30>>
+<<set $happiness += 2>>
+<<else>>
+This action doesn't reduce water usage.  
+<<set $happiness -= 1>>
+Pete's current water usage: <<print $waterUsage>> liters/day.  
+Pete needs to use less water to earn dining dollars and increase his happiness.
+<</if>>
+
+[[Return|Room]]

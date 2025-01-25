@@ -9,29 +9,72 @@
     "start": "Start"
 }
 
-:: Minigame {"position":"725,500","size":"100,100"}
-Game here
-
-[[Score|Score]]
-
-
-:: Planner {"position":"725,375","size":"100,100"}
-Do you want to eat out on sunday or eat leftovers (repeat 7 times)
-
-[[I am hungry|Minigame]]
-
-
 :: Room {"position":"725,250","size":"100,100"}
+<<set $energy to $energy - 1>><<if $happiness < 0>><<goto "LostHappiness">><<elseif $diningDollars < 0>><<goto "LostDiningDollars">><</if>>DAY $day
+
+Energy: $energy
 Dining Dollars: $diningDollars
 Happiness: $happiness
+Water Usage: <<print $waterUsage>> liters/day  
 
-Here lies Pete. His room is dirty. There is trash everywhere. Pete is <<if $happiness is 0>>depressed<<elseif $happiness lt 5>>less depressed<<elseif $happiness lt 10>>kind of happy, actually<<else>>happy<</if>>.
+Here lies Pete. His room is dirty. There is trash everywhere. Pete is <<if $happiness is 0>>depressed<<elseif $happiness < 5>>less depressed<<elseif $happiness < 10>>kind of happy, actually<<else>>happy<</if>>.
 
-Pete needs to track his eco footprint to get dining dollars and make himself happy.
+Pete needs to [[track his eco footprint to get dining dollars|Save Purdue]] and make himself happy.
 Help Pete!
 
+<<if $energy is 0>>Pete is tired. He must [[end the day|EndTheDay]].<<else>>
+[[Recycle|RecyclingGame]]
 [[Plan out his week|Planner]]
+[[Plan out his water usage|WaterStart]]<</if>>
 
+:: Sleep
+
+Zzzzzzzz...
+
+[[A new day comes.|Room]]
+
+<<set $energy to 3>>
+<<set $day to $day + 1>>
+
+:: Save Purdue
+The "Save Purdue From The Environmental Apocalypse Or We're All Going To Die Ahhhh" program allows students to recycle and do other eco-conscious things in exchange for dining dollars.
+
+It's an environmental program. The name was quite controversial, but people kept it because the ghost of Mitch Daniels threatened to kick them off a cliff otherwise.
+
+[[Return|Room]]
+
+:: RecyclingGame
+<<set _allObjects = $recycleObjects.concat($trashObjects).concat($compostObjects)>><<set $recycleObject = _allObjects.random()>>Pete has some objects. More specifically, he has: $recycleObject.
+
+Where will he put this object?
+
+[[Trash]]
+[[Recycle]]
+[[Compost]]
+
+:: Trash
+<<if $trashObjects.includes($recycleObject)>>This is correct! The automated detection system assigns Pete 5 dining dollars and he gets 1 happiness.<<set $diningDollars to $diningDollars+5>><<set $happiness to $happiness + 1>>
+
+<<else>>This is incorrect! Pete loses 1 happiness and the omniscient Purdue surveillance lords remove 1 dining dollar from his account for this unforgivable error. He is devastated.<<set $happiness to $happiness - 1>><<set $diningDollars to $diningDollars - 1>>
+<</if>>
+
+[[Room]]
+
+:: Recycle
+<<if $recycleObjects.includes($recycleObject)>>This is correct! The automated detection system assigns Pete 5 dining dollars and he gets 1 happiness.<<set $diningDollars to $diningDollars+5>><<set $happiness to $happiness + 1>>
+
+<<else>>This is incorrect! Pete loses 1 happiness and the omniscient Purdue surveillance lords remove 1 dining dollar from his account for this unforgivable error. He is devastated.<<set $happiness to $happiness - 1>><<set $diningDollars to $diningDollars - 1>>
+<</if>>
+
+[[Room]]
+
+:: Compost
+<<if $compostObjects.includes($recycleObject)>>This is correct! The automated detection system assigns Pete 5 dining dollars and he gets 1 happiness.<<set $diningDollars to $diningDollars+5>><<set $happiness to $happiness + 1>>
+
+<<else>>This is incorrect! Pete loses 1 happiness and the omniscient Purdue surveillance lords remove 1 dining dollar from his account for this unforgivable error. He is devastated.<<set $happiness to $happiness - 1>><<set $diningDollars to $diningDollars - 1>>
+<</if>>
+
+[[Room]]
 
 :: Start {"position":"575,250","size":"100,100"}
 PENNILESS PETE
@@ -41,4 +84,8 @@ You must help him save money : (
 
 [[Help him|Room]]
 
-<<set $diningDollars to 0>><<set $happiness to 0>>
+<<set $diningDollars to 100>><<set $happiness to 1>><<set $day to 1>><<set $energy to 3>><<set $leftovers = 1>><<set $dayOfTheWeek = 0>><<set $waterUsage to 20>>
+<<set $selectBins = ["Trash", "Recyle", "Compost"]>>
+<<set $recycleObjects = ["Plastic Bottle", "Plastic Jar", "Plastic Jug", "Plastic Tub", "Tin Can", "Aluminum Can", "Steel Can", "Paper", "Newspaper", "Magazine", "Cardboard Box", "Milk Carton", "Juice Box", "Food Carton", "Glass Bottle"]>>
+<<set $trashObjects = ["Plastic Bag", "Plastic Wrap", "Bubble Wrap", "Sandwich Bag", "Freezer Bag", "Chip Bag", "Juice Pouch", "Soup Pouch", "Cup with Plastic Coating", "Cup with Wax Coating", "Polystyrene Foam"]>>
+<<set $compostObjects = ["Grass Cutting", "Weeds", "Banana Peel", "Leaves", "Junk Mail", "Paper Towel", "Bag", "Apple Core", "Shit", "Tea Leaves", "Coffe Grounds", "Piss", "Nail Clippings", "Egg Shells", "Wool", "Cotton"]>>
