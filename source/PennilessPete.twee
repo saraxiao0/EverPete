@@ -1,16 +1,13 @@
 :: StoryTitle
-PennilessPete
-
+    PennilessPete
 
 :: StoryData
 {
-  "ifid": "0297E40D-F75B-487B-AAE2-FCF04BCEAB1C",
-  "format": "Harlowe",
-  "format-version": "3.3.9",
-  "start": "Start",
-  "zoom": 1
+    "ifid": "FA157186-A1C3-4F2D-A90B-B35264A62C4D", 
+    "format": "SugarCube",
+    "format-version": "2.37.3",
+    "start": "Start"
 }
-
 
 :: Minigame {"position":"725,500","size":"100,100"}
 Game here
@@ -25,27 +22,23 @@ Do you want to eat out on sunday or eat leftovers (repeat 7 times)
 
 
 :: Room {"position":"725,250","size":"100,100"}
-Here lies pete
+Dining Dollars: $diningDollars
+Happiness: $happiness
 
-His room is dirty
+Here lies Pete. His room is dirty. There is trash everywhere. Pete is <<if $happiness is 0>>depressed<<elseif $happiness lt 5>>less depressed<<elseif $happiness lt 10>>kind of happy, actually<<else>>happy<</if>>.
 
-There is a mattress and fridge, that is all
-And trash everywhere
-
-Pete is depressed
+Pete needs to track his eco footprint to get dining dollars and make himself happy.
+Help Pete!
 
 [[Plan out his week|Planner]]
 
 
-:: Score {"position":"725,625","size":"100,100"}
-Here is how many you got right
-
-Here is how much you saved
-
-[[This will update the screen|Room]]
-
-
 :: Start {"position":"575,250","size":"100,100"}
+PENNILESS PETE
+
 Pete is broke : (
 You must help him save money : (
+
 [[Help him|Room]]
+
+<<set $diningDollars to 0>><<set $happiness to 0>>
