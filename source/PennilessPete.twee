@@ -86,4 +86,4 @@ You must help him save money : (
 <<set $selectBins = ["Trash", "Recyle", "Compost"]>>
 <<set $recycleObjects = ["Plastic Bottle", "Plastic Jar", "Plastic Jug", "Plastic Tub", "Tin Can", "Aluminum Can", "Steel Can", "Paper", "Newspaper", "Magazine", "Cardboard Box", "Milk Carton", "Juice Box", "Food Carton", "Glass Bottle"]>>
 <<set $trashObjects = ["Plastic Bag", "Plastic Wrap", "Bubble Wrap", "Sandwich Bag", "Freezer Bag", "Chip Bag", "Juice Pouch", "Soup Pouch", "Cup with Plastic Coating", "Cup with Wax Coating", "Polystyrene Foam"]>>
-<<set $compostObjects = ["Grass Cutting", "Weeds", "Banana Peel", "Leaves", "Junk Mail", "Paper Towel", "Bag", "Apple Core", "Shit"]>>
+<<set $compostObjects = ["Grass Cutting", "Weeds", "Banana Peel", "Leaves", "Junk Mail", "Paper Towel", "Bag", "Apple Core", "Shit", "Tea Leaves", "Coffe Grounds", "Piss", "Nail Clippings", "Egg Shells", "Wool", "Cotton"]>>
