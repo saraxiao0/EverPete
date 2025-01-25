@@ -9,29 +9,30 @@
     "start": "Start"
 }
 
-:: Minigame {"position":"725,500","size":"100,100"}
-
-
-[[Score|Score]]
-
-
-:: Planner {"position":"725,375","size":"100,100"}
-Do you want to eat out on sunday or eat leftovers (repeat 7 times)
-
-[[I am hungry|Minigame]]
-
-
 :: Room {"position":"725,250","size":"100,100"}
+<<set $energy to $energy - 1>><<if $happiness < 0>><<goto "LostHappiness">><<elseif $diningDollars < 0>><<goto "LostDiningDollars">><</if>>DAY $day
+
+Energy: $energy
 Dining Dollars: $diningDollars
 Happiness: $happiness
 
-Here lies Pete. His room is dirty. There is trash everywhere. Pete is <<if $happiness is 0>>depressed<<elseif $happiness lt 5>>less depressed<<elseif $happiness lt 10>>kind of happy, actually<<else>>happy<</if>>.
+Here lies Pete. His room is dirty. There is trash everywhere. Pete is <<if $happiness is 0>>depressed<<elseif $happiness < 5>>less depressed<<elseif $happiness < 10>>kind of happy, actually<<else>>happy<</if>>.
 
 Pete needs to [[track his eco footprint to get dining dollars|Save Purdue]] and make himself happy.
 Help Pete!
 
+<<if $energy is 0>>Pete is tired. He must [[sleep|Sleep]].<<else>>
 [[Recycle|RecyclingGame]]
-[[Plan out his week|Planner]]
+[[Plan out his week|Planner]]<</if>>
+
+:: Sleep
+
+Zzzzzzzz...
+
+[[A new day comes.|Room]]
+
+<<set $energy to 3>>
+<<set $day to $day + 1>>
 
 :: Save Purdue
 The "Save Purdue From The Environmental Apocalypse Or We're All Going To Die Ahhhh" program allows students to recycle and do other eco-conscious things in exchange for dining dollars.
@@ -81,7 +82,7 @@ You must help him save money : (
 
 [[Help him|Room]]
 
-<<set $diningDollars to 0>><<set $happiness to 0>>
+<<set $diningDollars to 1>><<set $happiness to 1>><<set $day to 1>><<set $energy to 3>>
 <<set $selectBins = ["Trash", "Recyle", "Compost"]>>
 <<set $recycleObjects = ["Plastic Bottle", "Plastic Jar", "Plastic Jug", "Plastic Tub", "Tin Can", "Aluminum Can", "Steel Can", "Paper", "Newspaper", "Magazine", "Cardboard Box", "Milk Carton", "Juice Box", "Food Carton", "Glass Bottle"]>>
 <<set $trashObjects = ["Plastic Bag", "Plastic Wrap", "Bubble Wrap", "Sandwich Bag", "Freezer Bag", "Chip Bag", "Juice Pouch", "Soup Pouch", "Cup with Plastic Coating", "Cup with Wax Coating", "Polystyrene Foam"]>>
