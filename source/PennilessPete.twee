@@ -10,7 +10,7 @@
 }
 
 :: Minigame {"position":"725,500","size":"100,100"}
-Game here
+
 
 [[Score|Score]]
 
@@ -43,6 +43,6 @@ You must help him save money : (
 
 <<set $diningDollars to 0>><<set $happiness to 0>>
 <<set $selectBins = ["Trash", "Recyle", "Compost"]>>
-<<set $recycleObjects = ["Cans", "Paper Bags"]>>
-<<set $trashObjects = ["Chips Bag", "Ballon"]>>
-<<set $compostObjects = ["Shit", "Banana Peel"]>>
+<<set $recycleObjects = ["Plastic Bottle", "Plastic Jar", "Plastic Jug", "Plastic Tub", "Tin Can", "Aluminum Can", "Steel Can", "Paper", "Newspaper", "Magazine", "Cardboard Box", "Milk Carton", "Juice Box", "Food Carton", "Glass Bottle"]>>
+<<set $trashObjects = ["Plastic Bag", "Plastic Wrap", "Bubble Wrap", "Sandwich Bag", "Freezer Bag", "Chip Bag", "Juice Pouch", "Soup Pouch", "Cup with Plastic Coating", "Cup with Wax Coating", "Polystyrene Foam"]>>
+<<set $compostObjects = ["Grass Cutting", "Weeds", "Banana Peel", "Leaves", "Junk Mail", "Paper Towel", "Bag", "Apple Core", "Shit"]>>
