@@ -1,0 +1,87 @@
+========*READY-to-USE TWEEGO*========
+
+========Thanks!
+Thank you for downloading this TWEEGO Folder! 
+I hope the folder and guide will be useful for your project(s).
+If you found use with it, please consider:
+- Rating it on the asset page
+- Leaving a comment
+- Sharing the asset pack with others!
+
+Consider sending me a link to your project: I love to see what this folder was used for!
+
+THANK YOU AGAIN! <3
+
+========Credits:
+Tweego is a free (gratis and libre) command line compiler for Twine/Twee story formats, written in Go, created by TME (https://github.com/tmedwards/tweego). The Ready-to-Use folder is based on the one put together by Sjoerd (https://github.com/SjoerdHekking/).
+
+> Formats:
+* Chapbook (https://klembot.github.io/chapbook/) is a free (MIT license) coding format for Twine/Twee created by Chris Klimas.
+* Harlowe (https://twine2.neocities.org/) is a free coding format for Twine/Twee created by Leon Arnott.
+* Snowman (https://videlais.github.io/snowman/) is a free (MIT license) coding format for Twine/Twee created by Chris Klimas and maintained by Dan Cox.
+* SugarCube (http://www.motoslave.net/sugarcube/2/) is a free (gratis and libre) coding format for Twine/Twee created by TME.
+* All Twine 1 formats (https://github.com/tweecode/twine) are free coding formats for Twine/Twee, with Responsive created by Emmanuel King Turner. There are no indicated creator for Jonah and SugarCane.
+
+> License:
+The Folder and Guide is under a CC-0/MIT license. 
+Consider at least crediting TME if your use Tweego to create your project (since *he* made Tweego).
+
+========This Folder includes:
+> //Guide//:
+- The //Ready-to-Use Tweego Guide//, with extensive explanation to "install" and to use Tweego for both MacOS and Windows, examples and recommendations.
+** Source Code is available on GitHub (https://github.com/manonamora/Twine-Template/tree/main/Tweego%20Folder)
+> //Tweego//:
+- Tweego (v2.1.1-Twee3) for MacOS or Windows incl. licenses 
+	- unavailable in //Ready-to-Use Folder (MacOS - sans Tweego)// version 
+- Twine formats:
+	- Twine 2 main formats: Chapbook, Harlowe, Snowman and SugarCane
+	- Twine 1 main formats: Jonah, Responsive, SugarCane
+- Editable Tweego scripts:
+	- Windows: {{{build.bat}}}, {{{debug.bat}}}, {{{decompile.bat}}}
+	- MacOS: {{{build.sh}}}, {{{debug.sh}}}, {{{decompile.sh}}}
+	- with a Cheat-Sheet with basic instructions
+	- with required folders: {{{source}}}, {{{export}}}, {{{decomp}}}
+> //Base New Project//:
+- A //Ready-to-Code// Project (SugarCube 2.37.3 - source folder):
+	- The Minimal Base required to compile
+		- includes annotations on how to change the code to make it compatible with other Twine formats
+	- A JavaScript file for script code (empty)
+	- A CSS file for the StyleSheet (empty)
+- Compiled examples (SugarCube 2.37.3 - export folder)
+	- Playable HTML file
+	- Playable HTML file in Debug/Test Mode
+
+========Template made by manonamora with Sugarcube (v 2.37.3).
+You can use this folder with any Twine (1 & 2) format, as long as you save the format in the right place (see *Adding other Formats* in the Guide).
+
+/!\ WARNING /!\
+A New IFID should be generated before using the template. See the *The Mandatory Passages* page in the Guide.
+
+========Notes:
+This guide includes instructions on installing and using Tweego for both MacOS and Windows devices, as well as Twine 1 and 2 formats. It also explains how to read and use the Twee Notation, and include scripts to make the use of Tweego smoother.
+
+I highly recommend checking the chosen format's documentation if you need help coding in that format.
+
+If you have any question about or any issue with the template, send me an ask over on Tumblr or comment on the asset page. 
+
+========Links
+Tumblr: 
+	https://manonamora-if.tumblr.com/
+Itch:
+	https://manonamora.itch.io/
+Asset Collection:
+	https://itch.io/c/2917452/twine-templates-guides-and-code
+SugarCube Guide:
+	https://manonamora.itch.io/twine-sugarcube-guide
+
+Twinery (Twine):
+	https://twinery.org/
+Tweego: 
+	https://github.com/tmedwards/tweego
+Twine Resources:
+	https://intfiction.org/t/twine-resource-masterlist-wiki/65903
+W3 School:
+	https://www.w3schools.com/css/default.asp
+	https://www.w3schools.com/cssref/default.asp
+(MDN)Mozilla Developer:
+	https://developer.mozilla.org/en-US/
