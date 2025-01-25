@@ -1,0 +1,71 @@
+:: StoryTitle
+Save Energy
+
+
+:: StoryData
+{
+  "ifid": "77F87BA8-1ED8-48E2-9B8D-C42AF061B97A",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Saving Energy",
+  "zoom": 1
+}
+
+
+:: Choices {"position":"575,400","size":"100,100"}
+When you go for your classes, do you want to keep the lights turned on or off?
+
+[[On]]
+[[Off]]
+
+
+:: Dishwasher {"position":"525,1025","size":"100,100"}
+<<set $diningDollars to $diningDollars - 5>><<set $happiness to $happiness - 2>>
+
+
+
+:: Hand {"position":"650,1025","size":"100,100"}
+<<set $diningDollars to $diningDollars + 5>><<set $happiness to $happiness + 2>>
+
+
+
+:: Next1 {"position":"650,650","size":"100,100"}
+Do you want to unplug your electronics while leaving your room?
+
+[[Yes]]
+[[No]]
+
+
+:: Next2 {"position":"525,900","size":"100,100"}
+Do you want to use the dishwasher for washing the dishes or prefer to wash it by hand? 
+[[Dishwasher]]
+[[Hand]]
+
+
+:: No {"position":"650,775","size":"100,100"}
+<<set $diningDollars to $diningDollars - 5>><<set $happiness to $happiness - 2>>
+[[Next|Next2]] 
+
+
+:: Off {"position":"637.5,525","size":"100,100"}
+<<set $diningDollars to $diningDollars + 5>><<set $happiness to $happiness + 2>>
+
+[[Next|Next1]]
+
+
+:: On {"position":"525,525","size":"100,100"}
+<<set $diningDollars to $diningDollars - 5>><<set $happiness to $happiness - 2>>
+[[Next|Next1]]
+
+
+:: Saving Energy {"position":"575,275","size":"100,100"}
+Energy Saving
+
+Help Pete save Energy 
+
+[[Help him|Choices]]
+
+
+:: Yes {"position":"525,775","size":"100,100"}
+<<set $diningDollars to $diningDollars + 5>><<set $happiness to $happiness + 2>>
+[[Next|Next2]]

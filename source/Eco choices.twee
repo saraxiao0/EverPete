@@ -1,0 +1,133 @@
+:: StoryTitle
+Eco choices
+
+
+:: StoryData
+{
+  "ifid": "A77A8801-E47C-4B7D-8F77-FEF80AEC5948",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Eco Choices",
+  "zoom": 1
+}
+
+
+:: Amazon {"position":"450,525","size":"100,100"}
+<<set $diningDollars to $diningDollars - 15>><<set $happiness to $happiness - 7>>
+[[Next|Next1]]
+
+
+:: Bookstore {"position":"575,525","size":"100,100"}
+<<set $diningDollars to $diningDollars + 5>><<set $happiness to $happiness + 7>>
+[[Next|Next1]]
+
+
+:: Chair {"position":"575,1275","size":"100,100"}
+<<set $diningDollars to $diningDollars - 40>><<set $happiness to $happiness + 5>>
+
+
+
+:: Choices {"position":"575,400","size":"100,100"}
+Pete needs to buy some books for his SCLA class, should he buy the new ones from amazon or get reused ones from the bookstore for cheap?
+
+[[Amazon]]
+[[Bookstore]]
+
+
+:: Curtains {"position":"575,1400","size":"100,100"}
+<<set $diningDollars to $diningDollars - 20>><<set $happiness to $happiness + 6>>
+
+
+
+:: Eco Choices {"position":"575,275","size":"100,100"}
+Help Pete make some basic choices 
+
+[[Help him|Choices]]
+
+
+:: Fast food worker {"position":"575,1025","size":"100,100"}
+<<set $diningDollars to $diningDollars +10>><<set $happiness to $happiness + 7>>
+[[Next|Next3]]
+
+
+:: Fridge {"position":"575,1525","size":"100,100"}
+<<set $diningDollars to $diningDollars - 80>><<set $happiness to $happiness + 7>>
+
+
+
+:: Front desk {"position":"575,1150","size":"100,100"}
+<<set $diningDollars to $diningDollars + 12>><<set $happiness to $happiness + 7>>
+[[Next|Next3]]
+
+
+:: IT intern {"position":"450,1025","size":"100,100"}
+<<set $diningDollars to $diningDollars +15>><<set $happiness to $happiness + 7>>
+[[Next|Next3]]
+
+
+:: Lamp {"position":"325,1275","size":"100,100"}
+<<set $diningDollars to $diningDollars - 12>><<set $happiness to $happiness + 2>>
+
+
+
+:: Microwave {"position":"450,1525","size":"100,100"}
+<<set $diningDollars to $diningDollars + 45>><<set $happiness to $happiness + 7>>
+
+
+
+:: Mirror {"position":"325,1400","size":"100,100"}
+<<set $diningDollars to $diningDollars - 12>><<set $happiness to $happiness + 4>>
+
+
+
+:: Multiple loads {"position":"450,775","size":"100,100"}
+<<set $diningDollars to $diningDollars - 15>><<set $happiness to $happiness - 7>>
+[[Next|Next2]]
+
+
+:: Next1 {"position":"450,650","size":"100,100"}
+Should Pete do multiple laundry loads to separate his clothes, or just combine everything into one load?
+
+[[Multiple loads]]
+[[one load]]
+
+
+:: Next2 {"position":"575,900","size":"100,100"}
+Which of the following jobs do you think would be the best fit for Pete?
+
+[[Fast food worker]]
+[[TA]]
+[[IT intern]]
+[[Front desk]]
+
+
+:: Next3 {"position":"450,1150","size":"100,100"}
+Which of the following furniture do you think would benefit Pete?
+[[Table]]
+[[Chair]]
+[[Lamp]]
+[[Rug]]
+[[Curtains]]
+[[Mirror]]
+[[Microwave]]
+[[Fridge]]
+
+
+:: Rug {"position":"450,1400","size":"100,100"}
+<<set $diningDollars to $diningDollars - 30>><<set $happiness to $happiness + 7>>
+
+
+
+:: TA {"position":"700,1025","size":"100,100"}
+<<set $diningDollars to $diningDollars + 13>><<set $happiness to $happiness +7>>
+[[Next|Next3]]
+
+
+:: Table {"position":"450,1275","size":"100,100"}
+<<set $diningDollars to $diningDollars - 50>><<set $happiness to $happiness + 7>>
+
+
+
+:: one load {"position":"575,775","size":"100,100"}
+<<set $diningDollars to $diningDollars + 5>><<set $happiness to $happiness + 7>>
+[[Next|Next2]]
