@@ -2,8 +2,6 @@
 Welcome to the water-saving game for Penniless Pete!  
 Pete needs to reduce his water usage to save money and increase his happiness.  
 
-Pete's current water usage: <<print $waterUsage>> liters/day.  
-Pete needs to use less water to earn dining dollars and increase his happiness.
 
 [[Track Water Usage|WaterGame]]
 
@@ -27,6 +25,8 @@ Pete shortened his shower by 5 minutes! Water usage is reduced by 10 liters.
 <<else>>
 This action doesn't reduce water usage.  
 <<set $happiness -= 1>>
+Pete's current water usage: <<print $waterUsage>> liters/day.  
+Pete needs to use less water to earn dining dollars and increase his happiness.
 <</if>>
 
 [[Return to Water Start|WaterStart]]
@@ -39,6 +39,8 @@ Pete turned off the faucet while brushing teeth! Water usage is reduced by 5 lit
 <<else>>
 This action doesn't reduce water usage.  
 <<set $happiness -= 1>>
+Pete's current water usage: <<print $waterUsage>> liters/day.  
+Pete needs to use less water to earn dining dollars and increase his happiness.
 <</if>>
 
 [[Return to Water Start|WaterStart]]
@@ -51,6 +53,8 @@ Pete used a dishwasher! Water usage is reduced by 15 liters.
 <<else>>
 This action doesn't reduce water usage.  
 <<set $happiness -= 1>>
+Pete's current water usage: <<print $waterUsage>> liters/day.  
+Pete needs to use less water to earn dining dollars and increase his happiness.
 <</if>>
 
 [[Return to Water Start|WaterStart]]
@@ -63,6 +67,8 @@ Pete used the washing machine efficiently! Water usage is reduced by 20 liters.
 <<else>>
 This action doesn't reduce water usage.  
 <<set $happiness -= 1>>
+Pete's current water usage: <<print $waterUsage>> liters/day.  
+Pete needs to use less water to earn dining dollars and increase his happiness.
 <</if>>
 
 [[Return to Water Start|WaterStart]]
@@ -75,6 +81,8 @@ Pete set up a rainwater collection system! Water usage is reduced by 30 liters.
 <<else>>
 This action doesn't reduce water usage.  
 <<set $happiness -= 1>>
+Pete's current water usage: <<print $waterUsage>> liters/day.  
+Pete needs to use less water to earn dining dollars and increase his happiness.
 <</if>>
 
 [[Return to Water Start|WaterStart]]
