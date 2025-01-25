@@ -21,7 +21,7 @@ Here lies Pete. His room is dirty. There is trash everywhere. Pete is <<if $happ
 Pete needs to [[track his eco footprint to get dining dollars|Save Purdue]] and make himself happy.
 Help Pete!
 
-<<if $energy is 0>>Pete is tired. He must [[sleep|Sleep]].<<else>>
+<<if $energy is 0>>Pete is tired. He must [[end the day|EndTheDay]].<<else>>
 [[Recycle|RecyclingGame]]
 [[Plan out his week|Planner]]<</if>>
 
@@ -83,7 +83,7 @@ You must help him save money : (
 [[Help him|Room]]
 [[WaterStart (exists only for testing purposes)|WaterStart]]
 
-<<set $diningDollars to 1>><<set $happiness to 1>><<set $day to 1>><<set $energy to 3>>
+<<set $diningDollars to 100>><<set $happiness to 1>><<set $day to 1>><<set $energy to 3>><<set $leftovers = 1>><<set $dayOfTheWeek = 0>>
 <<set $selectBins = ["Trash", "Recyle", "Compost"]>>
 <<set $recycleObjects = ["Plastic Bottle", "Plastic Jar", "Plastic Jug", "Plastic Tub", "Tin Can", "Aluminum Can", "Steel Can", "Paper", "Newspaper", "Magazine", "Cardboard Box", "Milk Carton", "Juice Box", "Food Carton", "Glass Bottle"]>>
 <<set $trashObjects = ["Plastic Bag", "Plastic Wrap", "Bubble Wrap", "Sandwich Bag", "Freezer Bag", "Chip Bag", "Juice Pouch", "Soup Pouch", "Cup with Plastic Coating", "Cup with Wax Coating", "Polystyrene Foam"]>>
