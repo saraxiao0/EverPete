@@ -22,7 +22,7 @@ Pete eats and has gained a leftover. Now he can sleep.
 <<set $diningDollars to $diningDollars - 5>>
 <<set $leftovers to $leftovers + 1>>
 
-:: Leftover {"position":"575,875","size":"100,100"}
+:: Leftovers {"position":"575,875","size":"100,100"}
 Pete eats and has lost a leftover. Now he can sleep.
 
 [[Sleep]]
