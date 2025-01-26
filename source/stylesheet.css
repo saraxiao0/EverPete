@@ -20,3 +20,7 @@ html {
     margin: 5px;
     padding: 5px;
 }
+
+pre {
+    font-size: 50%;
+}
