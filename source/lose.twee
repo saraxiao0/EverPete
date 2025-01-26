@@ -4,9 +4,7 @@ Purdue Pete has lost all motivation and hope to continue. He is so sad that he c
 
 : (
 
-You lose!
-
-[[Restart|Start]]
+You lose! You must restart.
 
 :: LostDiningDollars
 
@@ -14,6 +12,4 @@ Purdue Pete has lost all dining dollars. At this stage he will starve to death. 
 
 : (
 
-You lose!
-
-[[Restart|Start]]
+You lose! You must restart.

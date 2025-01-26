@@ -1,0 +1,13 @@
+:: Books {"position":"575,400","size":"100,100"}
+Pete needs to buy some books for his SCLA class. Should he buy the new ones from Amazon or get reused ones from the bookstore for cheap?
+
+[[Amazon]]
+[[Bookstore]]
+
+:: Amazon {"position":"450,525","size":"100,100"}
+Pete loses 15 dining dollars and 7 happiness for this choice.<<set $diningDollars to $diningDollars - 15>><<set $happiness to $happiness - 7>>
+[[Next|Room]]
+
+:: Bookstore {"position":"575,525","size":"100,100"}
+Pete gains 5 dining dollars and 7 happiness for this choice.<<set $diningDollars to $diningDollars + 5>><<set $happiness to $happiness + 7>>
+[[Next|Room]]

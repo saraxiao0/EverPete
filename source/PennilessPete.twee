@@ -1,31 +1,38 @@
 :: StoryTitle
-    PennilessPete
+Penniless Pete
 
 :: StoryData
 {
-    "ifid": "FA157186-A1C3-4F2D-A90B-B35264A62C4D", 
-    "format": "SugarCube",
-    "format-version": "2.37.3",
-    "start": "Start"
+        "ifid": "5384C2A6-F0EB-4E33-B3A0-D6D0DC5A1A4A",
+        "format": "SugarCube",
+        "format-version": "2.36.1"
 }
 
 :: Room {"position":"725,250","size":"100,100"}
-<<set $energy to $energy - 1>><<if $happiness < 0>><<goto "LostHappiness">><<elseif $diningDollars < 0>><<goto "LostDiningDollars">><</if>>DAY $day
+<<set $energy to $energy - 1>><<if $happiness < 0>><<goto "LostHappiness">><<elseif $diningDollars < 0>><<goto "LostDiningDollars">><</if>><h2>DAY $day - <<= setup.dayOfTheWeek($day)>><<set $dayOfTheWeek to setup.dayOfTheWeek>></h2>
 
-Energy: $energy
-Dining Dollars: $diningDollars
-Happiness: $happiness
-Water Usage: <<print $waterUsage>> liters/day  
+Energy: $energy --- Dining Dollars: $diningDollars --- Happiness: $happiness --- Water Usage: <<print $waterUsage>> liters/day --- Job: $job
 
-Here lies Pete. His room is dirty. There is trash everywhere. Pete is <<if $happiness is 0>>depressed<<elseif $happiness < 5>>less depressed<<elseif $happiness < 10>>kind of happy, actually<<else>>happy<</if>>.
+<<if $dayOfTheWeek is "Tuesday">>Tuesday is Pete's laundry day. Pete must do [[laundry|Next1A]].<<else>>Here lies Pete. His room is <<if visited("Clean Room")>>clean. (Wow, he cleaned his room? No way.)<<else>>dirty. There is trash everywhere. (Sad.)<</if>> Pete is <<if $happiness < 3>>depressed<<elseif $happiness < 5>>less depressed<<elseif $happiness < 10>>kind of happy, actually<<else>>happy<</if>>.
 
-Pete needs to [[track his eco footprint to get dining dollars|Save Purdue]] and make himself happy.
-Help Pete!
+Pete needs to [[track his eco footprint to get dining dollars|Save Purdue]] and make himself happy. Help Pete!
 
 <<if $energy is 0>>Pete is tired. He must [[end the day|EndTheDay]].<<else>>
+<<if not visited("Clean Room")>>[[Clean Room|Clean Room]]
+<</if>><<if not visited("Saving Energy")>>[[Plan out his energy usage|Saving Energy]]
+<</if>><<if not visited("Books")>>[[Buy Books|Books]]
+<</if>>
+
+<<if not visited("Job")>>[[Get a job|Job]]<<else>>[[Work]]<</if>>
+
+[[Buy furniture|Furniture]]
 [[Recycle|RecyclingGame]]
-[[Plan out his week|Planner]]
-[[Plan out his water usage|WaterStart]]<</if>>
+[[Plan out his water usage|WaterStart]]<</if>><</if>>
+
+:: Clean Room
+Pete gets the motivation to clean his room. Wow! It's now sparkling clean!
+
+[[Return|Room]]
 
 :: Sleep
 
@@ -39,9 +46,9 @@ Zzzzzzzz...
 :: Save Purdue
 The "Save Purdue From The Environmental Apocalypse Or We're All Going To Die Ahhhh" program allows students to recycle and do other eco-conscious things in exchange for dining dollars.
 
-It's an environmental program. The name was quite controversial, but people kept it because the ghost of Mitch Daniels threatened to kick them off a cliff otherwise.
+It's an environmental program. The name was quite controversial, but people kept it because the ghost of John Purdue threatened to kick them off a cliff otherwise.
 
-[[Return|Room]]
+[[Return|Room]]<<set $energy to $energy + 1>>
 
 :: RecyclingGame
 <<set _allObjects = $recycleObjects.concat($trashObjects).concat($compostObjects)>><<set $recycleObject = _allObjects.random()>>Pete has some objects. More specifically, he has: $recycleObject.
@@ -77,15 +84,22 @@ Where will he put this object?
 [[Room]]
 
 :: Start {"position":"575,250","size":"100,100"}
-PENNILESS PETE
+<h1>PENNILESS PETE</h1>
 
 Pete is broke : (
 You must help him save money : (
 
 [[Help him|Room]]
 
-<<set $diningDollars to 100>><<set $happiness to 1>><<set $day to 1>><<set $energy to 3>><<set $leftovers = 1>><<set $dayOfTheWeek = 0>><<set $waterUsage to 20>>
+<<set $diningDollars to 10>><<set $happiness to 1>><<set $day to 1>><<set $energy to 3>><<set $leftovers = 1>><<set $waterUsage to 20>><<set $job to "unemployed">>
 <<set $selectBins = ["Trash", "Recyle", "Compost"]>>
 <<set $recycleObjects = ["Plastic Bottle", "Plastic Jar", "Plastic Jug", "Plastic Tub", "Tin Can", "Aluminum Can", "Steel Can", "Paper", "Newspaper", "Magazine", "Cardboard Box", "Milk Carton", "Juice Box", "Food Carton", "Glass Bottle"]>>
 <<set $trashObjects = ["Plastic Bag", "Plastic Wrap", "Bubble Wrap", "Sandwich Bag", "Freezer Bag", "Chip Bag", "Juice Pouch", "Soup Pouch", "Cup with Plastic Coating", "Cup with Wax Coating", "Polystyrene Foam"]>>
 <<set $compostObjects = ["Grass Cutting", "Weeds", "Banana Peel", "Leaves", "Junk Mail", "Paper Towel", "Bag", "Apple Core", "Shit", "Tea Leaves", "Coffe Grounds", "Piss", "Nail Clippings", "Egg Shells", "Wool", "Cotton"]>>
+<<script>>
+setup.dayOfTheWeek = function (number) {
+  number = number % 7;
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  return days[number];
+};
+<</script>>

@@ -2,3 +2,13 @@
     If you are only using the base UI, and you're not planning on customising the Interface (colour/font-change), you won't need this file.
     Otherwise, go wild in the stylesheet!
 */
+
+@font-face {
+    font-family: "OurFont";
+    src: url("./VT323-Regular.ttf");
+}
+
+html {
+    font-family: "OurFont", monospace;
+    font-size: 120%;
+}

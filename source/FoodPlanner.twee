@@ -15,7 +15,7 @@ You have $leftovers leftovers and $diningDollars Dining Dollars.
     <</if>>
 
 :: Takeout {"position":"575,875","size":"100,100"}
-Pete feels happy and has gained a leftover. Now he can sleep.
+Pete eats and has gained a leftover. Now he can sleep.
 
 [[Sleep]]
 
@@ -23,7 +23,7 @@ Pete feels happy and has gained a leftover. Now he can sleep.
 <<set $leftovers to $leftovers + 1>>
 
 :: Leftover {"position":"575,875","size":"100,100"}
-Pete feels happy and has lost a leftover. Now he can sleep.
+Pete eats and has lost a leftover. Now he can sleep.
 
 [[Sleep]]
 

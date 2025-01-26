@@ -1,0 +1,28 @@
+:: Job {"position":"575,900","size":"100,100"}
+Which of the following jobs do you think would be the best fit for Pete?
+
+[[Fast food worker]]
+[[TA]]
+[[IT intern]]
+[[Front desk]]
+
+:: Fast food worker {"position":"575,1025","size":"100,100"}
+<<set $job to "fast food worker">><<set $jobSalary to 10>>Pete is now a $job.
+[[Next|Work]]
+
+:: TA {"position":"700,1025","size":"100,100"}
+<<set $job to "TA">><<set $jobSalary to 13>>Pete is now a $job.
+[[Next|Work]]
+
+:: IT intern {"position":"450,1025","size":"100,100"}
+<<set $job to "IT intern">><<set $jobSalary to 15>>Pete is now an $job.
+[[Next|Work]]
+
+:: Front desk {"position":"575,1150","size":"100,100"}
+<<set $job to "front desk receptionist">><<set $jobSalary to 12>>Pete is now a $job.
+[[Next|Work]]
+
+:: Work
+Pete works 1 shift and gets $jobSalary dining dollars and 7 happiness. Good job for contributing to society, Pete!<<set $diningDollars to $diningDollars + $jobSalary>><<set $happiness to $happiness + 7>>
+
+[[Return|Room]]

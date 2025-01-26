@@ -1,0 +1,15 @@
+:: Next1A {"position":"450,650","size":"100,100"}
+Should Pete do multiple laundry loads to separate his clothes, or just combine everything into one load?
+
+[[Multiple loads]]
+[[One load]]
+
+:: Multiple loads {"position":"450,775","size":"100,100"}
+The laundry is complete. Pete loses 15 dining dollars and 7 happiness for this poor choice.<<set $diningDollars to $diningDollars - 15>><<set $happiness to $happiness - 7>>
+
+[[Return|EndTheDay]]
+
+:: One load {"position":"575,775","size":"100,100"}
+The laundry is complete. Pete gets 5 dining dollars and 7 happiness for this excellent choice.<<set $diningDollars to $diningDollars + 5>><<set $happiness to $happiness + 7>>
+
+[[Return|EndTheDay]]
