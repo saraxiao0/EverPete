@@ -12,3 +12,11 @@ html {
     font-family: "OurFont", monospace;
     font-size: 120%;
 }
+
+.stats {
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}

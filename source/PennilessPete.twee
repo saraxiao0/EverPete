@@ -11,8 +11,6 @@ Penniless Pete
 :: Room {"position":"725,250","size":"100,100"}
 <<set $energy to $energy - 1>><<if $happiness < 0>><<goto "LostHappiness">><<elseif $diningDollars < 0>><<goto "LostDiningDollars">><</if>><h2>DAY $day - <<= setup.dayOfTheWeek($day)>><<set $dayOfTheWeek to setup.dayOfTheWeek>></h2>
 
-Energy: $energy --- Dining Dollars: $diningDollars --- Happiness: $happiness --- Water Usage: <<print $waterUsage>> liters/day --- Job: $job
-
 <<if $dayOfTheWeek is "Tuesday">>Tuesday is Pete's laundry day. Pete must do [[laundry|Next1A]].<<else>>Here lies Pete. His room is <<if visited("Clean Room")>>clean. (Wow, he cleaned his room? No way.)<<else>>dirty. There is trash everywhere. (Sad.)<</if>> Pete is <<if $happiness < 3>>depressed<<elseif $happiness < 5>>less depressed<<elseif $happiness < 10>>kind of happy, actually<<else>>happy<</if>>.
 
 Pete needs to [[track his eco footprint to get dining dollars|Save Purdue]] and make himself happy. Help Pete!
@@ -83,7 +81,7 @@ Where will he put this object?
 
 [[Room]]
 
-:: Start {"position":"575,250","size":"100,100"}
+:: Start [menu] {"position":"575,250","size":"100,100"}
 <h1>PENNILESS PETE</h1>
 <<if $happiness < 5>>
 <pre>
@@ -153,3 +151,7 @@ setup.dayOfTheWeek = function (number) {
   return days[number];
 };
 <</script>>
+
+:: PassageHeader
+<<if !tags().includes("menu")>><div class="stats">Energy: $energy</div>  <div class="stats">Dining Dollars: $diningDollars</div> <div class="stats">Happiness: $happiness</div> <div class="stats">Water Usage: <<print $waterUsage>> liters/day</div> <div class="stats">Job: $job</div><</if>>
+<hr/>
