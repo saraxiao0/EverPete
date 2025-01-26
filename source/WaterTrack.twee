@@ -22,7 +22,7 @@ Pete shortened his shower by 5 minutes! Water usage is reduced by 10 liters.
 <<set $waterUsage -= 10>>
 <<set $happiness += 1>>
 <<else>>
-This action doesn't reduce water usage.  
+Pete tried to reduce water usage, but his neighbors used a bunch of water so the effects were canceled out. Sad :(
 <<set $happiness -= 1>>
 Pete's current water usage: <<print $waterUsage>> liters/day.  
 Pete needs to use less water to earn dining dollars and increase his happiness.
@@ -36,7 +36,7 @@ Pete turned off the faucet while brushing teeth! Water usage is reduced by 5 lit
 <<set $waterUsage -= 5>>
 <<set $happiness += 1>>
 <<else>>
-This action doesn't reduce water usage.  
+Pete tried to reduce water usage, but there was a faucet leak so the effects were canceled out. Sad :(
 <<set $happiness -= 1>>
 Pete's current water usage: <<print $waterUsage>> liters/day.  
 Pete needs to use less water to earn dining dollars and increase his happiness.
@@ -50,7 +50,7 @@ Pete used a dishwasher! Water usage is reduced by 15 liters.
 <<set $waterUsage -= 15>>
 <<set $happiness += 2>>
 <<else>>
-This action doesn't reduce water usage.  
+Pete tried to reduce water usage, but the dishwasher broke so the effects were canceled out. Sad :(
 <<set $happiness -= 1>>
 Pete's current water usage: <<print $waterUsage>> liters/day.  
 Pete needs to use less water to earn dining dollars and increase his happiness.
@@ -64,7 +64,7 @@ Pete used the washing machine efficiently! Water usage is reduced by 20 liters.
 <<set $waterUsage -= 20>>
 <<set $happiness += 2>>
 <<else>>
-This action doesn't reduce water usage.  
+Pete tried to reduce water usage, but the washing machine broke so the effects were canceled out. Sad :(
 <<set $happiness -= 1>>
 Pete's current water usage: <<print $waterUsage>> liters/day.  
 Pete needs to use less water to earn dining dollars and increase his happiness.
@@ -78,7 +78,7 @@ Pete set up a rainwater collection system! Water usage is reduced by 30 liters.
 <<set $waterUsage -= 30>>
 <<set $happiness += 2>>
 <<else>>
-This action doesn't reduce water usage.  
+Pete tried to reduce water usage that way, but due to climate change it didn't rain so the effects were canceled out. Sad :(
 <<set $happiness -= 1>>
 Pete's current water usage: <<print $waterUsage>> liters/day.  
 Pete needs to use less water to earn dining dollars and increase his happiness.
