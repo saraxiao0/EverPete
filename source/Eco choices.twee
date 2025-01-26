@@ -9,43 +9,51 @@ Which of the following furniture do you think would benefit Pete?
 [[Microwave]]
 [[Fridge]]
 
+[[Give up. Don't buy anything.|Room]]
 
 :: Chair {"position":"575,1275","size":"100,100"}
-<<set $diningDollars to $diningDollars - 40>><<set $happiness to $happiness + 5>>
+Pete buys a chair. He spends 40 dining dollars and gains 5 happiness.<<set $diningDollars to $diningDollars - 40>><<set $happiness to $happiness + 5>>
 
 [[Return|Room]]
 
 :: Curtains {"position":"575,1400","size":"100,100"}
 <<set $diningDollars to $diningDollars - 20>><<set $happiness to $happiness + 6>>
+Pete bought curtains and lost 20 dining dollars
 
 [[Return|Room]]
 
 :: Fridge {"position":"575,1525","size":"100,100"}
 <<set $diningDollars to $diningDollars - 80>><<set $happiness to $happiness + 7>>
+Pete bought fridge and lost 80 dining dollars
 
 [[Return|Room]]
 
 :: Lamp {"position":"325,1275","size":"100,100"}
 <<set $diningDollars to $diningDollars - 12>><<set $happiness to $happiness + 2>>
+Pete bought lamp and lost 12 dining dollars
 
 [[Return|Room]]
 
 :: Microwave {"position":"450,1525","size":"100,100"}
-<<set $diningDollars to $diningDollars + 45>><<set $happiness to $happiness + 7>>
+<<set $diningDollars to $diningDollars - 45>><<set $happiness to $happiness + 7>>
+Pete bought microwave and lost 45 dining dollars
 
 [[Return|Room]]
 
 :: Mirror {"position":"325,1400","size":"100,100"}
 <<set $diningDollars to $diningDollars - 12>><<set $happiness to $happiness + 4>>
+Pete bought mirror and lost 12 dining dollars
 
 [[Return|Room]]
 
 :: Rug {"position":"450,1400","size":"100,100"}
 <<set $diningDollars to $diningDollars - 30>><<set $happiness to $happiness + 7>>
+Pete bought rug and lost 30 dining dollars
 
 [[Return|Room]]
 
 :: Table {"position":"450,1275","size":"100,100"}
 <<set $diningDollars to $diningDollars - 50>><<set $happiness to $happiness + 7>>
+Pete bought table and lost 50 dining dollars
 
 [[Return|Room]]
